@@ -42,7 +42,7 @@ void searchLl(node* head,int se){
 	}
 }
 int noelementsLl(node *head){
-	int tot = 0; 
+	int tot = 0;
 	while(head != NULL){
 		head = head->next;
 		tot++;
@@ -103,7 +103,7 @@ node* reverseLl(node* head){
 int main(){
 	node *head = NULL;
 	int n;
-	cout << "Enter initial numbers:" << endl; 
+	cout << "Enter initial numbers:" << endl;
 	cin >> n;
 	int in[n];
 	cout << "Enter initial list contents:" << endl;
@@ -117,15 +117,15 @@ int main(){
 			case 1: cout << "Enter number to be searched: ";
 					cin >> se;
 					searchLl(head,se);
-					break; 
-			case 2: cout << "Enter position to be deleted under " << noelementsLl(head) << ": "; 
+					break;
+			case 2: cout << "Enter position to be deleted under " << noelementsLl(head) << ": ";
 					cin >> pos;
 					if(pos>noelementsLl(head)){
 						cout << "Shame on you." << endl;
 						break;
 					}else head = deleteNode(head,pos);
 					break;
-			case 3: cout << "Enter position and number to be added under " << noelementsLl(head) << ": "; 
+			case 3: cout << "Enter position and number to be added under " << noelementsLl(head) << ": ";
 					cin >> pos >> se;
 					if(pos>noelementsLl(head)+1){
 						cout << "Don't do this to yourself." << endl;
@@ -137,7 +137,7 @@ int main(){
 			case 5: cout << "Reversing the list!! why you do this?" << endl;
 					head = reverseLl(head);
 					break;
-			case 6: cout << "Good bye!!" << endl; 
+			case 6: cout << "Good bye!!" << endl;
 					break;
 			default: cout << "Wrong option try again" << endl;
 		}
